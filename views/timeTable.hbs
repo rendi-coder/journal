@@ -1,0 +1,356 @@
+<h1>Журнал посещаемости</h1>
+
+<form action="/timetable" method="POST">
+ {{!-- Понедельник  --}}
+<table>
+        <thead>
+            <span class="day_of_the_week">Понедельник</span>
+            <tr>
+                <th>1 пара</th>
+                <th>2 пара</th>
+                <th>3 пара</th>
+                <th>4 пара</th>
+            </tr>
+        </thead>
+          <tbody>
+
+          
+            <tr style="border: none;">
+                <td >
+                    <div class="input-field">
+                    <input name="1lesson1" placeholder="Название Предмет" class="mlessona" type="text" class="validate" >
+                    <label for="1lesson1">Предмет</label>
+                    <span class="helper-text" data-error="Введите название предмета"></span>
+                    </div>
+                    <div class="input-field">
+                    <input name="1teacher1" placeholder="ФИО преподователя" class="mlessona" type="text" class="validate" >
+                    <label for="1first_name1">Препод</label>
+                    <span class="helper-text" data-error="Введите ФИО преподователя"></span>
+                    </div>
+                </td>
+
+                <td>
+                   <div class="input-field">
+                    <input name="1lesson2" placeholder="Название Предмет" class="mlessonb" type="text" class="validate" >
+                    <label for="1lesson2">Предмет</label>
+                    <span class="helper-text" data-error="Введите название предмета"></span>
+                    </div>
+                    <div class="input-field">
+                    <input name="1teacher2" placeholder="ФИО преподователя" class="mlessonb" type="text" class="validate" >
+                    <label for="1first_name2">Препод</label>
+                     <span class="helper-text" data-error="Введите ФИО преподователя"></span>
+                    </div>
+                </td>
+                <td>
+                    <div class="input-field">
+                    <input name="1lesson3" placeholder="Название Предмет" class="mlessonc" type="text" class="validate" >
+                    <label for="1lesson3">Предмет</label>
+                    <span class="helper-text" data-error="Введите название предмета"></span>
+                    </div>
+                    <div class="input-field">
+                    <input name="1teacher3" placeholder="ФИО преподователя" class="mlessonc" type="text" class="validate" >
+                    <label for="1first_name3">Препод</label>
+                     <span class="helper-text" data-error="Введите ФИО преподователя"></span>
+                    </div>
+                </td>
+                <td>
+                    <div class="input-field">
+                    <input name="1lesson4" placeholder="Название Предмет" class="mlessond" type="text" class="validate" >
+                    <label for="1lesson4">Предмет</label>
+                    <span class="helper-text" data-error="Введите название предмета"></span>
+                    </div>
+                    <div class="input-field">
+                    <input name="1teacher4" placeholder="ФИО преподователя" class="mlessond" type="text" class="validate" >
+                    <label for="1first_name4">Препод</label>
+                     <span class="helper-text" data-error="Введите ФИО преподователя"></span>
+                    </div>
+                </td>
+            </tr>
+          
+        </tbody>
+
+    </table>
+ {{!-- Вторник  --}}
+<table>
+        <thead>
+            <span class="day_of_the_week">Вторник</span>
+            <tr>
+                <th>1 пара</th>
+                <th>2 пара</th>
+                <th>3 пара</th>
+                <th>4 пара</th>
+            </tr>
+        </thead>
+          <tbody>
+
+          
+            <tr style="border: none;">
+                <td >
+                    <div class="input-field">
+                    <input name="2lesson1" placeholder="Название Предмет" class="tlessona" type="text" class="validate" >
+                    <label for="2lesson1">Предмет</label>
+                    <span class="helper-text" data-error="Введите название предмета"></span>
+                    </div>
+                    <div class="input-field">
+                    <input name="2teacher1" placeholder="ФИО преподователя" class="tlessona" type="text" class="validate" >
+                    <label for="2first_name1">Препод</label>
+                     <span class="helper-text" data-error="Введите ФИО преподователя"></span>
+                    </div>
+                </td>
+
+                <td>
+                   <div class="input-field">
+                    <input name="2lesson2" placeholder="Название Предмет" class="tlessonb" type="text" class="validate" >
+                    <label for="2lesson2">Предмет</label>
+                    <span class="helper-text" data-error="Введите название предмета"></span>
+                    </div>
+                    <div class="input-field">
+                    <input name="2teacher2" placeholder="ФИО преподователя" class="tlessonb" type="text" class="validate" >
+                    <label for="2first_name2">Препод</label>
+                     <span class="helper-text" data-error="Введите ФИО преподователя"></span>
+                    </div>
+                </td>
+                <td>
+                    <div class="input-field">
+                    <input name="2lesson3" placeholder="Название Предмет" class="tlessonc" type="text" class="validate" >
+                    <label for="2lesson3">Предмет</label>
+                    <span class="helper-text" data-error="Введите название предмета"></span>
+                    </div>
+                    <div class="input-field">
+                    <input name="2teacher3" placeholder="ФИО преподователя" class="tlessonc" type="text" class="validate" >
+                    <label for="2first_name3">Препод</label>
+                     <span class="helper-text" data-error="Введите ФИО преподователя"></span>
+                    </div>
+                </td>
+                <td>
+                    <div class="input-field">
+                    <input name="2lesson4" placeholder="Название Предмет" class="tlessond" type="text" class="validate" >
+                    <label for="2lesson4">Предмет</label>
+                    <span class="helper-text" data-error="Введите название предмета"></span>
+                    </div>
+                    <div class="input-field">
+                    <input name="2teacher4" placeholder="ФИО преподователя" class="tlessond"  type="text" class="validate" >
+                    <label for="2first_name4">Препод</label>
+                     <span class="helper-text" data-error="Введите ФИО преподователя"></span>
+                    </div>
+                </td>
+            </tr>
+          
+        </tbody>
+
+    </table>
+   {{!-- СРЕДА  --}}
+<table>
+        <thead>
+            <span class="day_of_the_week">Среда</span>
+            <tr>
+                <th>1 пара</th>
+                <th>2 пара</th>
+                <th>3 пара</th>
+                <th>4 пара</th>
+            </tr>
+        </thead>
+         <tbody>
+
+          
+            <tr style="border: none;">
+                <td >
+                    <div class="input-field">
+                    <input name="3lesson1" placeholder="Название Предмет" class="wlessona"  type="text" class="validate" >
+                    <label for="3lesson1">Предмет</label>
+                    <span class="helper-text" data-error="Введите название предмета"></span>
+                    </div>
+                    <div class="input-field">
+                    <input name="3teacher1" placeholder="ФИО преподователя" class="wlessona"  type="text" class="validate" >
+                    <label for="3first_name1">Препод</label>
+                     <span class="helper-text" data-error="Введите ФИО преподователя"></span>
+                    </div>
+                </td>
+
+                <td>
+                   <div class="input-field">
+                    <input  name="3lesson2" placeholder="Название Предмет" class="wlessonb"  type="text" class="validate" >
+                    <label for="3lesson2">Предмет</label>
+                    <span class="helper-text" data-error="Введите название предмета"></span>
+                    </div>
+                    <div class="input-field">
+                    <input name="3teacher2" placeholder="ФИО преподователя" class="wlessonb"  type="text" class="validate" >
+                    <label for="3first_name2">Препод</label>
+                     <span class="helper-text" data-error="Введите ФИО преподователя"></span>
+                    </div>
+                </td>
+                <td>
+                    <div class="input-field">
+                    <input name="3lesson3" placeholder="Название Предмет"class="wlessonc"  type="text" class="validate" >
+                    <label for="3lesson3">Предмет</label>
+                    <span class="helper-text" data-error="Введите название предмета"></span>
+                    </div>
+                    <div class="input-field">
+                    <input name="3teacher3" placeholder="ФИО преподователя" class="wlessonc"  type="text" class="validate" >
+                    <label for="3first_name3">Препод</label>
+                     <span class="helper-text" data-error="Введите ФИО преподователя"></span>
+                    </div>
+                </td>
+                <td>
+                    <div class="input-field">
+                    <input name="3lesson4" placeholder="Название Предмет" class="wlessond" type="text" class="validate" >
+                    <label for="3lesson4">Предмет</label>
+                    <span class="helper-text" data-error="Введите название предмета"></span>
+                    </div>
+                    <div class="input-field">
+                    <input name="3teacher4" placeholder="ФИО преподователя"class="wlessond" type="text" class="validate" >
+                    <label for="3first_name4">Препод</label>
+                     <span class="helper-text" data-error="Введите ФИО преподователя"></span>
+                    </div>
+                </td>
+            </tr>
+          
+        </tbody>
+
+    </table>
+ {{!-- Четверг  --}}
+<table>
+        <thead>
+            <span class="day_of_the_week">Четверг</span>
+            <tr>
+                <th>1 пара</th>
+                <th>2 пара</th>
+                <th>3 пара</th>
+                <th>4 пара</th>
+            </tr>
+        </thead>
+         <tbody>
+
+          
+            <tr style="border: none;">
+                <td >
+                    <div class="input-field">
+                    <input name="4lesson1" placeholder="Название Предмет" class="thlessona" type="text" class="validate" >
+                    <label for="4lesson1">Предмет</label>
+                    <span class="helper-text" data-error="Введите название предмета"></span>
+                    </div>
+                    <div class="input-field">
+                    <input name="4teacher1" placeholder="ФИО преподователя"class="thlessona" type="text" class="validate" >
+                    <label for="4first_name1">Препод</label>
+                    <span class="helper-text" data-error="Введите ФИО преподователя"></span>
+                    </div>
+                </td>
+
+                <td>
+                   <div class="input-field">
+                    <input name="4lesson2" placeholder="Название Предмет" class="thlessonb" type="text" class="validate" >
+                    <label for="4lesson2">Предмет</label>
+                    <span class="helper-text" data-error="Введите название предмета"></span>
+                    </div>
+                    <div class="input-field">
+                    <input name="4teacher2" placeholder="ФИО преподователя" class="thlessonb" type="text" class="validate" >
+                    <label for="4first_name2">Препод</label>
+                     <span class="helper-text" data-error="Введите ФИО преподователя"></span>
+                    </div>
+                </td>
+                <td>
+                    <div class="input-field">
+                    <input name="4lesson3" placeholder="Название Предмет" class="thlessonc" type="text" class="validate" >
+                    <label for="4lesson3">Предмет</label>
+                    <span class="helper-text" data-error="Введите название предмета"></span>
+                    </div>
+                    <div class="input-field">
+                    <input name="4teacher3" placeholder="ФИО преподователя" class="thlessonc" type="text" class="validate" >
+                    <label for="4first_name3">Препод</label>
+                     <span class="helper-text" data-error="Введите ФИО преподователя"></span>
+                    </div>
+                </td>
+                <td>
+                    <div class="input-field">
+                    <input name="4lesson4" placeholder="Название Предмет" class="thlessond" type="text" class="validate" >
+                    <label for="4lesson4">Предмет</label>
+                    <span class="helper-text" data-error="Введите название предмета"></span>
+                    </div>
+                    <div class="input-field">
+                    <input name="4teacher4" placeholder="ФИО преподователя" class="thlessond" type="text" class="validate" >
+                    <label for="4first_name4">Препод</label>
+                     <span class="helper-text" data-error="Введите ФИО преподователя"></span>
+                    </div>
+                </td>
+            </tr>
+          
+        </tbody>
+
+    </table>
+{{!-- Пятница  --}}
+<table>
+        <thead>
+            <span class="day_of_the_week">Пятница</span>
+            <tr>
+                <th>1 пара</th>
+                <th>2 пара</th>
+                <th>3 пара</th>
+                <th>4 пара</th>
+            </tr>
+        </thead>
+        <tbody>
+
+          
+            <tr style="border: none;">
+                <td >
+                    <div class="input-field">
+                    <input name="5lesson1" placeholder="Название Предмет" class="flessona" type="text" class="validate" >
+                    <label for="5lesson1">Предмет</label>
+                    <span class="helper-text" data-error="Введите название предмета"></span>
+                    </div>
+                    <div  class="input-field">
+                    <input name="5teacher1" placeholder="ФИО преподователя" class="flessona" type="text" class="validate" >
+                    <label for="5first_name1">Препод</label>
+                     <span class="helper-text" data-error="Введите ФИО преподователя"></span>
+                    </div>
+                </td>
+
+                <td>
+                   <div class="input-field">
+                    <input name="5lesson2" placeholder="Название Предмет" class="flessonb" type="text" class="validate" >
+                    <label for="5lesson2">Предмет</label>
+                    <span class="helper-text" data-error="Введите название предмета"></span>
+                    </div>
+                    <div class="input-field">
+                    <input name="5teacher2" placeholder="ФИО преподователя" class="flessonb" type="text" class="validate" >
+                    <label for="5first_name2">Препод</label>
+                     <span class="helper-text" data-error="Введите ФИО преподователя"></span>
+                    </div>
+                </td>
+                <td>
+                    <div class="input-field">
+                    <input name="5lesson3" placeholder="Название Предмет" class="flessonc" type="text" class="validate" >
+                    <label for="5lesson3">Предмет</label>
+                    <span class="helper-text" data-error="Введите название предмета"></span>
+                    </div>
+                    <div class="input-field">
+                    <input name="5teacher3" placeholder="ФИО преподователя" class="flessonc" type="text" class="validate" >
+                    <label for="5first_name3">Препод</label>
+                     <span class="helper-text" data-error="Введите ФИО преподователя"></span>
+                    </div>
+                </td>
+                <td>
+                    <div class="input-field">
+                    <input name="5lesson4" placeholder="Название Предмет" class="flessond" type="text" class="validate" >
+                    <label for="5lesson4">Предмет</label>
+                    <span class="helper-text" data-error="Введите название предмета"></span>
+                    </div>
+                    <div class="input-field">
+                    <input name="5teacher4" placeholder="ФИО преподователя" class="flessond" type="text" class="validate" >
+                    <label for="5first_name4">Препод</label>
+                     <span class="helper-text" data-error="Введите ФИО преподователя"></span>
+                    </div>
+                </td>
+            </tr>
+          
+        </tbody>
+
+    </table>
+    
+        <div class="input-field" style="margin-top: 2rem;">
+          <input name="group" id="group" type="text" class="validate" required>
+          <label for="group">Группа</label>
+          <span class="helper-text" data-error="Группа не выбрана">Выберите группу</span>
+        </div>
+         <button id="addTimeTable" class="btn btn-primary">Добавить расписание</button>
+    </form>

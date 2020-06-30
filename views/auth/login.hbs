@@ -1,0 +1,23 @@
+<div class="auth row">
+    <div class="col s6 offset-s3">
+    <h3>Войти в Электронный Журнал</h3>
+
+     <form action="/auth/login" method="POST">
+     
+        <div class="input-field">
+          <input name="login" id="login" type="text" class="validate" required>
+          <label for="login">Login</label>
+          <span class="helper-text" data-error="Неверный Login">Введите Login</span>
+        </div>
+     
+        <div class="input-field">
+          <input name="pass" id="password" type="password" class="validate" required>
+          <label for="password">Password</label>
+          <span class="helper-text" data-error="Неверный пароль">Введите пароль</span>
+        </div>
+      <input type="hidden" value="{{error}}" id="authError">
+      <button class="btn" type="submit">Войти</button>
+      </form>
+
+    </div>
+</div>

@@ -1,0 +1,30 @@
+.active{
+    background-color: lightpink;
+}
+
+.day_of_the_week{
+    font-size: 3rem;
+    color:#23eebb;
+    margin-left: auto;
+}
+
+.borderBottomNone{
+    border-bottom: none;
+}
+
+.numberStudent{
+    padding-bottom:2rem;
+    padding-left: 2rem;
+}
+
+.auth{
+    padding-top: 3rem;
+}
+
+
+
+.nav-wrapper a {
+    font-size: 2rem;
+    font-weight: 700;
+    color:#00b0ff;
+}

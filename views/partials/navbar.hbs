@@ -1,0 +1,48 @@
+<nav>
+    <div class="nav-wrapper container">
+      <a href="#" class="brand-logo container">Журнал посещаемости</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+        {{#if isHome}}
+        <li><a class="active" href="/">Главная</a></li>
+        {{else}}
+        <li><a href="/">Главная</a></li>
+        {{/if}}
+        
+
+
+        {{#if isAdmin}}
+             {{#if isTimetable}}
+            <li><a class="active" href="/timetable">Расписание</a></li>
+            {{else}}
+            <li><a href="/timetable">Расписание</a></li>
+            {{/if}}
+
+            {{#if isGroup}}
+            <li><a class="active" href="/group">Группы</a></li>
+            {{else}}
+            <li><a href="/group">Группы</a></li>
+            {{/if}}
+            <li><a href="/auth/logout">Выйти</a></li>
+        {{else}}
+            {{#if isAuth}}
+                {{#if isJournal}}
+                <li><a class="active" href="/journal">Журнал</a></li>
+                {{else}}
+                <li><a href="/journal">Журнал </a></li>
+                {{/if}}
+
+                <li><a href="/auth/logout">Выйти</a></li>
+
+            {{else}}
+                {{#if isLogin}}
+                <li><a class="active" href="/">Войти</a></li>
+                {{else}}
+                <li><a href="/auth/login">Войти</a></li>
+                {{/if}}
+            {{/if}}
+        {{/if}}
+
+      </ul>
+    </div>
+  </nav>

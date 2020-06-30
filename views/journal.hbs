@@ -1,0 +1,113 @@
+
+<h1>Журнал Старост</h1>
+     {{#if students }}
+     <div style="display: flex;">
+      
+            <input style="width:15rem;" placeholder="Выберите дату занятий" id="datePicker" type="text" class="datepicker">
+            <button disabled="true" id="showTimeTable" class="btn btn-primary" style="background-color: orange;">Выбрать</button>
+       
+        <form style="margin-left:4rem" action="journal/upload" method="post" enctype="multipart/form-data">
+            <input type="hidden" id="hiddenDateFile" name="date" value='{{dayOfTheWeek}}'>
+            <input id="attendanceFile" type="file" name="filedata" /><br><br>
+            <button disabled="true" type="file" name="filedata"  id="addFromFile" {{{disabled}}} class="btn btn" style="margin-left: 10px;background-color:rgb(194, 175, 238)">Загрузить данные с файла</button>
+        </form>
+
+     </div>
+    <div id="day_of_the_week" class="day_of_the_week">{{{dayOfTheWeek}}}</div>
+       
+    <table>
+             <thead id="MyJournal">
+                 {{#if timeTable}}
+                
+                <tr style="border: none;">
+                <td>
+                    <div class="input-field">
+                        <input type="text" placeholder="Предмет" readonly value="Предмет:" >
+                        <span class="helper-text">Преподователь:</span>
+                    </div>
+                </td>
+                {{#each timeTable}}
+                <td>
+                    <div class="input-field">
+                        <input type="text" placeholder="ПАРЫ НЕТ" readonly value={{subject}} >
+                        <span class="helper-text">{{teacher}}</span>
+                    </div>
+                </td>
+                {{/each}}
+            </tr>
+            {{else}}
+            {{!-- <p>ВЫХОДНОЙ ОТДЫХАЙ</p> --}}
+            {{/if}}
+            </thead>
+            <tbody id="bodyJournal">
+                <tr>
+                    <th>Группа {{group}}</th>
+                    <th>1 пара</th>
+                    <th>2 пара</th>
+                    <th>3 пара</th>
+                    <th>4 пара</th>
+                </tr>
+
+               
+                <form action="/journal/addAttendance" method="POST" id="dataForm">
+                {{#each students}}
+                 <tr id="listStudents" class="borderBottomNone">
+                    <th><h4 style="margin-top: 0px;">{{id}}.{{surname}} {{name}}</h4></th>
+                    <td>
+                      
+                            <select  class = "browser-default" form="dataForm" name="1select{{id}}">
+                            <option name="1minus{{id}}" value="minus">-</option>
+                            <option name="1Op{{id}}" value="Op">Оп</option>
+                            <option name="1Uv{{id}}" value="Uv">Ув</option>
+                            <option name="1plus{{id}}" value="plus">+</option>
+                            </select>
+                            <label>Поставь отметку</label>
+                        
+                    </td>
+                    <td>
+                        
+                            <select  class = "browser-default" id="select-{{id}}" form="dataForm" name="2select{{id}}">
+                            <option name="2minus{{id}}" value="minus">-</option>
+                            <option name="2Op{{id}}" value="Op">Оп</option>
+                            <option name="2Uv{{id}}" value="Uv">Ув</option>
+                            <option name="2plus{{id}}" value="plus">+</option>
+                            </select>
+                            <label>Поставь отметку</label>
+                        
+                    </td>
+                    <td>
+                        
+                            <select  class = "browser-default"  form="dataForm" name="3select{{id}}">
+                            <option name="3minus{{id}}" value="minus">-</option>
+                            <option name="3Op{{id}}" value="Op">Оп</option>
+                            <option name="3Uv{{id}}" value="Uv">Ув</option>
+                            <option name="3plus{{id}}" value="plus">+</option>
+                            </select>
+                            <label>Поставь отметку</label>
+                       
+                    </td>
+                    <td>
+                        
+                            <select  class = "browser-default"  form="dataForm" name="4select{{id}}">
+                            <option name="4minus{{id}}" value="minus">-</option>
+                            <option name="4Op{{id}}" value="Op">Оп</option>
+                            <option name="4Uv{{id}}" value="Uv">Ув</option>
+                            <option name="4plus{{id}}" value="plus">+</option>
+                            </select>
+                            <label>Поставь отметку</label>
+                       
+                    </td>
+                </tr>
+                {{/each}}
+              
+                <input id="hiddenDate" type="hidden" name="date" value="{{dayOfTheWeek}}">
+                <button id="addAttendance" {{{disabled}}} class="btn btn-primary">Внести данные</button>
+                </form> 
+
+            </tbody>
+    </table>
+   {{else}}
+       <h3>НЕТ Студентов и рассписания нет </h3>
+       <p>Нужно попросить админа он добавить группу он все может</p>
+    {{/if}}  
+ 
